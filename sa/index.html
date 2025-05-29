@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Interativa - Login</title>
+    <link rel="stylesheet" href="1login.css">
+
+   
+</head>
+<body>
+</div>
+    <header>
+        <h1>Física Interativa</h1>
+        <img src="sesi.png" alt="logo">
+    </header>
+    
+    <main>
+        <div class="login-container">
+            <div class="container">
+                <h2>Bem-vindo à Física Interativa</h2>
+                <p>Insira seu nome para começar a explorar</p>
+                
+                <input type="text" id="username" placeholder="Seu nome">
+                <button class="button" id="login-btn">Entrar</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Física Interativa - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function() {
+            const username = document.getElementById('username').value;
+            if (username.trim() !== '') {
+                localStorage.setItem('username', username);
+                window.location.href = '2menu.html';
+            } else {
+                alert('Por favor, insira seu nome.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios das Leis de Newton</title>
+    <link rel="stylesheet" href="5newton_laws.css">
+</head>
+<body>
+    <h1>Exercícios das Leis de Newton</h1>
+
+    <!-- Primeira Lei de Newton -->
+    <div class="exercise primeira-lei">
+        <h3>Exercício 1 - Primeira Lei (Inércia)</h3>
+        <div class="question">Um livro está descansando em uma mesa horizontal sem atrito. O que acontecerá com o livro?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q1" value="a" id="q1a">
+                <label for="q1a">O livro começará a se mover espontaneamente</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q1" value="b" id="q1b">
+                <label for="q1b">O livro permanecerá em repouso</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q1" value="c" id="q1c">
+                <label for="q1c">O livro cairá da mesa</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q1" value="d" id="q1d">
+                <label for="q1d">O livro se moverá para trás</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q1', 'b', 'feedback1')">Verificar Resposta</button>
+        <div id="feedback1" class="feedback"></div>
+    </div>
+
+    <div class="exercise primeira-lei">
+        <h3>Exercício 2 - Primeira Lei (Inércia)</h3>
+        <div class="question">Imagine um carro que para abruptamente. O que acontece com os passageiros no interior do veículo?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q2" value="a" id="q2a">
+                <label for="q2a">Os passageiros param imediatamente junto com o carro</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q2" value="b" id="q2b">
+                <label for="q2b">Os passageiros são jogados para trás</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q2" value="c" id="q2c">
+                <label for="q2c">Os passageiros tendem a continuar em movimento para frente</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q2" value="d" id="q2d">
+                <label for="q2d">Os passageiros não são afetados</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q2', 'c', 'feedback2')">Verificar Resposta</button>
+        <div id="feedback2" class="feedback"></div>
+    </div>
+
+    <div class="exercise primeira-lei">
+        <h3>Exercício 3 - Identificação da Lei</h3>
+        <img src="astronauta.jpg" alt="Astronauta flutuando no espaço" class="exercise-image">
+        <div class="question">Qual lei de Newton está sendo representada na imagem?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q3" value="a" id="q3a">
+                <label for="q3a">Primeira Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q3" value="b" id="q3b">
+                <label for="q3b">Segunda Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q3" value="c" id="q3c">
+                <label for="q3c">Terceira Lei</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q3', 'a', 'feedback3')">Verificar Resposta</button>
+        <div id="feedback3" class="feedback"></div>
+    </div>
+
+    <!-- Segunda Lei de Newton -->
+    <div class="exercise segunda-lei">
+        <h3>Exercício 4 - Segunda Lei (Força e Aceleração)</h3>
+        <div class="question">Se você aplicar o dobro da força em um objeto, o que acontecerá com sua aceleração?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q4" value="a" id="q4a">
+                <label for="q4a">A aceleração permanecerá a mesma</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q4" value="b" id="q4b">
+                <label for="q4b">A aceleração dobrará</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q4" value="c" id="q4c">
+                <label for="q4c">A aceleração será reduzida pela metade</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q4" value="d" id="q4d">
+                <label for="q4d">A aceleração será quatro vezes maior</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q4', 'b', 'feedback4')">Verificar Resposta</button>
+        <div id="feedback4" class="feedback"></div>
+    </div>
+
+    <div class="exercise segunda-lei">
+        <h3>Exercício 5 - Segunda Lei (Força e Aceleração)</h3>
+        <div class="question">Uma força de 50N move um objeto de 10 kg. Qual será sua aceleração?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q5" value="a" id="q5a">
+                <label for="q5a">2 m/s²</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q5" value="b" id="q5b">
+                <label for="q5b">5 m/s²</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q5" value="c" id="q5c">
+                <label for="q5c">10 m/s²</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q5" value="d" id="q5d">
+                <label for="q5d">500 m/s²</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q5', 'b', 'feedback5')">Verificar Resposta</button>
+        <div id="feedback5" class="feedback"></div>
+    </div>
+
+    <div class="exercise segunda-lei">
+        <h3>Exercício 6 - Identificação da Lei</h3>
+        <img src="carrinholeidois.jpg" alt="Pessoa empurrando carrinho de compras" class="exercise-image">
+        <div class="question">Qual lei de Newton está sendo representada na imagem?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q6" value="a" id="q6a">
+                <label for="q6a">Primeira Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q6" value="b" id="q6b">
+                <label for="q6b">Segunda Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q6" value="c" id="q6c">
+                <label for="q6c">Terceira Lei</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q6', 'b', 'feedback6')">Verificar Resposta</button>
+        <div id="feedback6" class="feedback"></div>
+    </div>
+
+    <!-- Terceira Lei de Newton -->
+    <div class="exercise terceira-lei">
+        <h3>Exercício 7 - Terceira Lei (Ação e Reação)</h3>
+        <div class="question">Quando um foguete expele gases para baixo, o que acontece com o foguete?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q7" value="a" id="q7a">
+                <label for="q7a">O foguete é empurrado para baixo</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q7" value="b" id="q7b">
+                <label for="q7b">O foguete é impulsionado para cima</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q7" value="c" id="q7c">
+                <label for="q7c">O foguete não se move</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q7" value="d" id="q7d">
+                <label for="q7d">O foguete se move lateralmente</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q7', 'b', 'feedback7')">Verificar Resposta</button>
+        <div id="feedback7" class="feedback"></div>
+    </div>
+
+    <div class="exercise terceira-lei">
+        <h3>Exercício 8 - Terceira Lei (Ação e Reação)</h3>
+        <div class="question">Quando você nada, o que acontece com a água ao seu redor?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q8" value="a" id="q8a">
+                <label for="q8a">A água não é afetada pelo seu movimento</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q8" value="b" id="q8b">
+                <label for="q8b">A água é empurrada na mesma direção do seu movimento</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q8" value="c" id="q8c">
+                <label for="q8c">A água é empurrada na direção oposta ao seu movimento</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q8" value="d" id="q8d">
+                <label for="q8d">A água para de se mover</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q8', 'c', 'feedback8')">Verificar Resposta</button>
+        <div id="feedback8" class="feedback"></div>
+    </div>
+
+    <div class="exercise terceira-lei">
+        <h3>Exercício 9 - Identificação da Lei</h3>
+        <img src="bolabasca.jpg" alt="Pessoa jogando uma bola de basquete" class="exercise-image">
+        <div class="question">Qual lei de Newton está sendo representada na imagem?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q9" value="a" id="q9a">
+                <label for="q9a">Primeira Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q9" value="b" id="q9b">
+                <label for="q9b">Segunda Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q9" value="c" id="q9c">
+                <label for="q9c">Terceira Lei</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q9', 'c', 'feedback9')">Verificar Resposta</button>
+        <div id="feedback9" class="feedback"></div>
+    </div>
+
+    <!-- Exercício Misto -->
+    <div class="exercise misto">
+        <h3>Exercício 10 - Identificação da Lei</h3>
+        <img src="rocket.gif" alt="foguete" class="exercise-image">
+        <div class="question">Qual lei de Newton está sendo representada na imagem?</div>
+        <div class="alternatives">
+            <div class="alternative">
+                <input type="radio" name="q10" value="a" id="q10a">
+                <label for="q10a">Primeira Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q10" value="b" id="q10b">
+                <label for="q10b">Segunda Lei</label>
+            </div>
+            <div class="alternative">
+                <input type="radio" name="q10" value="c" id="q10c">
+                <label for="q10c">Terceira Lei</label>
+            </div>
+        </div>
+        <button class="answer-btn" onclick="checkAnswer('q10', 'c', 'feedback10')">Verificar Resposta</button>
+        <div id="feedback10" class="feedback"></div>
+    </div>
+
+    <div class="navigation">
+        <li><a href="2menu.html">Menu Principal</a></li>
+        <li><a href="3newton.html">Leis de Newton</a></li>
+        <li><a href="4games.html">Jogos</a></li>
+        <li><a href="../5newton_laws.html">Avaliação</a></li>
+    </div>
+
+    <script src="5newton_laws.js"></script>
+</body>
+</html>

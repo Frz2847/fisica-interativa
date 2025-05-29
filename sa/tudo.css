@@ -1,0 +1,235 @@
+/* Modernização aplicada a todos os estilos */
+:root {
+    --blue-theme: #004e9f;
+    --first-law: #ff5a5a;
+    --second-law: #ffd166;
+    --third-law: #4ade80;
+    --light-blue: #3a7cc9;
+    --text-color: #333;
+    --bg-color: #f7f7f7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+header, footer {
+    background-color: var(--blue-theme);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+nav {
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.container, .menu-card, .law-card, .quiz-section, .exercise {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.container:hover, .menu-card:hover, .law-card:hover {
+    transform: translateY(-5px);
+}
+
+h1, h2, h3 {
+    color: var(--blue-theme);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.button, button, .yes-btn, .no-btn {
+    background-color: var(--blue-theme);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover, button:hover, .yes-btn:hover, .no-btn:hover {
+    background-color: var(--light-blue);
+    transform: translateY(-2px);
+}
+
+input[type="text"], .force-slider, .mass-slider {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    max-width: 90%;
+    width: 400px;
+}
+
+/* Cards por Lei */
+.first-law { border-left: 6px solid var(--first-law); background-color: rgba(255, 90, 90, 0.1); }
+.second-law { border-left: 6px solid var(--second-law); background-color: rgba(255, 209, 102, 0.1); }
+.third-law { border-left: 6px solid var(--third-law); background-color: rgba(74, 222, 128, 0.1); }
+
+.first-law h3 { color: var(--first-law); }
+.second-law h3 { color: var(--second-law); }
+.third-law h3 { color: var(--third-law); }
+
+.color-first { color: var(--first-law); font-weight: bold; }
+.color-second { color: var(--second-law); font-weight: bold; }
+.color-third { color: var(--third-law); font-weight: bold; }
+
+/* Quiz pergunta cores */
+.quiz-first {
+    border: 2px solid var(--first-law);
+    background-color: rgba(255, 90, 90, 0.05);
+}
+.quiz-second {
+    border: 2px solid var(--second-law);
+    background-color: rgba(255, 209, 102, 0.05);
+}
+.quiz-third {
+    border: 2px solid var(--third-law);
+    background-color: rgba(74, 222, 128, 0.05);
+}
+
+.quiz-first h3 { color: var(--first-law); }
+.quiz-second h3 { color: var(--second-law); }
+.quiz-third h3 { color: var(--third-law); }
+
+.quiz-question {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.quiz-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Botões de navegação entre jogos */
+.game-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.game-navigation button {
+    background-color: var(--blue-theme);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+}
+
+.game-navigation button:hover,
+.game-navigation .tab-active {
+    background-color: var(--light-blue);
+    border-bottom: 3px solid white;
+    transform: scale(1.05);
+}
+
+.active-game {
+    display: block;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .controls, .quiz-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}

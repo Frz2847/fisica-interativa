@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Interativa - Menu Principal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="2menu.css">
+   
+</head>
+<body>
+    <header>
+        <h1>Física Interativa</h1>
+        <img src="sesi.png" alt="logo">
+    </header>
+    
+    <nav>
+        <ul>
+        <li><a href="2menu.html">Menu Principal</a></li>
+            <li><a href="3newton.html">Leis de Newton</a></li>
+            <li><a href="4games.html">Jogos</a></li>
+            <li><a href="../5newton_laws.html">Avaliação</a></li>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <h2>Olá <span id="user-name">Estudante</span>, bem-vindo!</h2>
+            <p>Escolha uma das opções abaixo para começar a explorar:</p>
+            
+            <div class="menu-container">
+                <div class="menu-card" onclick="window.location.href='3newton.html'">
+                    <div class="menu-icon"><i class="fas fa-book"></i></div>
+                    <h3>Leis de Newton</h3>
+                    <p>Aprenda sobre as três leis fundamentais da física</p>
+                </div>
+                
+                <div class="menu-card" onclick="window.location.href='4games.html'">
+                    <div class="menu-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Jogos Interativos</h3>
+                    <p>Experimente simulações para entender melhor os conceitos</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Física Interativa - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username') || 'Estudante';
+            document.getElementById('user-name').textContent = username;
+        });
+    </script>
+</body>
+</html>

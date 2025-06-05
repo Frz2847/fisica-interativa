@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leis de Newton - Física Interativa</title>
+    <link rel="stylesheet" href="4games.css">
+</head>
+
+<body>
+    <header>
+        <h1>Física Interativa</h1>
+        <p>Aprenda física de forma divertida com nossos jogos interativos!</p>
+        <img src="sesi.png" alt="logo">
+    </header>
+
+    <nav>
+        <ul>
+      <li><a href="2menu.html">Menu Principal</a></li>
+            <li><a href="3newton.html">Leis de Newton</a></li>
+            <li><a href="4games.html">Jogos</a></li>
+            <li><a href="../5newton_laws.html">Avaliação</a></li>
+    </nav>
+
+    <main>
+        <div class="game-navigation">
+            <button id="firstLawBtn" class="tab-active">1ª Lei de Newton</button>
+            <button id="secondLawBtn">2ª Lei de Newton</button>
+            <button id="thirdLawBtn">3ª Lei de Newton</button>
+        </div>
+
+        <!-- Jogo da Primeira Lei -->
+        <div id="firstLawGame" class="game-content active-game">
+            <div class="container">
+                <h2>Desafio da Inércia</h2>
+
+                <div class="instruction">
+                    Clique na bola e arraste para empurrá-la. Observe o que acontece!
+                </div>
+
+                <div class="game-description">
+                    <p>Este jogo demonstra a primeira lei de Newton: um objeto em repouso tende a permanecer em repouso,
+                        e um objeto em movimento tende a permanecer em movimento, a menos que uma força externa atue
+                        sobre ele.</p>
+                </div>
+
+                <div class="game-container" id="gameArea">
+                    <div id="gameObject">BOLA</div>
+                </div>
+
+                <div class="visual-feedback" id="feedback">
+                    Experimente empurrar a bola!
+                </div>
+
+                <div class="controls">
+                    <button id="startButton">Jogar</button>
+                    <button id="resetButton">Reiniciar</button>
+                    <button id="helpButton">Ajuda</button>
+                </div>
+
+                <div class="law-explanation">
+                    <h3>O que é a Lei da Inércia?</h3>
+                    <p>A Lei da Inércia, ou Primeira Lei de Newton, diz que:</p>
+                    <ul>
+                        <li>Um objeto parado vai continuar parado até que alguma força o empurre.</li>
+                        <li>Um objeto em movimento vai continuar se movendo em linha reta até que alguma força o faça
+                            parar ou mudar de direção.</li>
+                    </ul>
+                    <p>No dia a dia, vemos isso quando um carro freia e sentimos nosso corpo ir para frente, ou quando
+                        um ônibus arranca e sentimos nosso corpo ir para trás.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jogo da Segunda Lei -->
+        <div id="secondLawGame" class="game-content">
+            <div class="container">
+                <h2>Desafio da Força e Aceleração</h2>
+
+                <div class="instruction">
+                    Ajuste a força e a massa para controlar a aceleração do carrinho!
+                </div>
+
+                <div class="game-description">
+                    <p>Este jogo demonstra a segunda lei de Newton: a aceleração de um objeto é diretamente proporcional
+                        à força aplicada e inversamente proporcional à sua massa (F = m·a).</p>
+                </div>
+
+                <div class="force-control">
+                    <label for="forceSlider">Força:</label>
+                    <input type="range" id="forceSlider" class="force-slider" min="0" max="100" value="50">
+                    <div class="force-value" id="forceValue">50 N</div>
+                </div>
+
+                <div class="mass-control">
+                    <label for="massSlider">Massa:</label>
+                    <input type="range" id="massSlider" class="mass-slider" min="10" max="100" value="50">
+                    <div class="mass-value" id="massValue">50 kg</div>
+                </div>
+
+                <div class="game-container" id="secondLawArea">
+                    <div id="carObject">CARRO</div>
+                </div>
+
+                <div class="visual-feedback" id="accelerationFeedback">
+                    Ajuste a força e a massa para ver a aceleração!
+                </div>
+
+                <div class="controls">
+                    <button id="applyForceButton">Aplicar Força</button>
+                    <button id="resetCarButton">Reiniciar</button>
+                    <button id="helpSecondButton">Ajuda</button>
+                </div>
+
+                <div class="second-law-explanation">
+                    <h3>O que é a Lei da Força e Aceleração?</h3>
+                    <p>A Segunda Lei de Newton estabelece que:</p>
+                    <ul>
+                        <li>A aceleração de um objeto é diretamente proporcional à força aplicada.</li>
+                        <li>A aceleração de um objeto é inversamente proporcional à sua massa.</li>
+                        <li>A fórmula matemática é: F = m·a (Força = massa × aceleração)</li>
+                    </ul>
+                    <p>No cotidiano, podemos observar que é mais fácil empurrar um carrinho de compras vazio (menor
+                        massa) do que um cheio (maior massa), e que quanto mais força aplicamos, mais rápido ele
+                        acelera.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jogo da Terceira Lei -->
+        <div id="thirdLawGame" class="game-content">
+            <div class="container">
+                <h3>Desafio do Foguete - Ação e Reação</h3>
+
+                <div class="instruction">
+                    Ajuste o controle de impulso e observe como o foguete se move devido à ação e reação!
+                </div>
+
+                <div class="game-description">
+                    <p>Este jogo demonstra a terceira lei de Newton: para cada ação há uma reação igual e oposta. O
+                        foguete expele gases (ação) e, como resultado, é impulsionado na direção oposta (reação).</p>
+                </div>
+
+                <div class="thrust-display">
+                    <label for="thrustControl">Controle de Impulso:</label>
+                    <input type="range" id="thrustControl" min="0" max="100" value="0">
+                    <div id="thrustValue">0%</div>
+                </div>
+
+
+                <!-- Atualização do HTML para o foguete no jogo da terceira lei -->
+                <div class="rocket-container" id="rocketArea">
+                    <div id="rocket">
+                        <div class="rocket-window"></div>
+                        <div class="rocket-window-2"></div>
+                        <div class="rocket-detail"></div>
+                        <div id="flame"></div>
+                        <div class="flame-particle"></div>
+                        <div class="flame-particle"></div>
+                        <div class="flame-particle"></div>
+                    </div>
+                </div>
+
+                <div class="visual-feedback" id="rocketFeedback">
+                    Ajuste o impulso para lançar o foguete!
+                </div>
+
+                <div class="controls">
+                    <button id="launchButton">Lançar</button>
+                    <button id="resetRocketButton">Reiniciar</button>
+                    <button id="helpThirdButton">Ajuda</button>
+                </div>
+
+                <div class="third-law-explanation">
+                    <h3>O que é a Lei da Ação e Reação?</h3>
+                    <p>A Terceira Lei de Newton afirma que:</p>
+                    <ul>
+                        <li>Para toda ação, existe uma reação igual e oposta.</li>
+                        <li>As forças sempre ocorrem aos pares - quando um objeto exerce uma força sobre outro, o
+                            segundo objeto exerce uma força igual e oposta sobre o primeiro.</li>
+                    </ul>
+                    <p>Exemplos comuns incluem o impulso de um foguete (os gases são expelidos para baixo, impulsionando
+                        o foguete para cima), o recuo de uma arma ao disparar, ou quando caminhamos (empurramos o chão
+                        para trás, e o chão nos empurra para frente).</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Física Interativa - Todos os direitos reservados</p>
+        <p>Desenvolvido para fins educacionais</p>
+        <p><a href="../termos.html">Termos de Uso</a> | <a href="../privacidade.html">Política de Privacidade</a></p>
+    </footer>
+
+    <script>
+        // Navegação entre jogos
+        const firstLawBtn = document.getElementById('firstLawBtn');
+        const secondLawBtn = document.getElementById('secondLawBtn');
+        const thirdLawBtn = document.getElementById('thirdLawBtn');
+
+        const firstLawGame = document.getElementById('firstLawGame');
+        const secondLawGame = document.getElementById('secondLawGame');
+        const thirdLawGame = document.getElementById('thirdLawGame');
+
+        firstLawBtn.addEventListener('click', () => {
+            showGame('firstLawGame');
+            setActiveTab('firstLawBtn');
+        });
+
+        secondLawBtn.addEventListener('click', () => {
+            showGame('secondLawGame');
+            setActiveTab('secondLawBtn');
+        });
+
+        thirdLawBtn.addEventListener('click', () => {
+            showGame('thirdLawGame');
+            setActiveTab('thirdLawBtn');
+        });
+
+        function showGame(gameId) {
+            // Esconder todos os jogos
+            firstLawGame.classList.remove('active-game');
+            secondLawGame.classList.remove('active-game');
+            thirdLawGame.classList.remove('active-game');
+
+            // Mostrar o jogo selecionado
+            document.getElementById(gameId).classList.add('active-game');
+        }
+
+        function setActiveTab(tabId) {
+            // Remover classe ativa de todos os botões
+            firstLawBtn.classList.remove('tab-active');
+            secondLawBtn.classList.remove('tab-active');
+            thirdLawBtn.classList.remove('tab-active');
+
+            // Adicionar classe ativa ao botão selecionado
+            document.getElementById(tabId).classList.add('tab-active');
+        }
+
+        // JOGO DA PRIMEIRA LEI - INÉRCIA
+        // Elementos do DOM
+        const gameObject = document.getElementById('gameObject');
+        const gameArea = document.getElementById('gameArea');
+        const feedback = document.getElementById('feedback');
+        const startButton = document.getElementById('startButton');
+        const resetButton = document.getElementById('resetButton');
+        const helpButton = document.getElementById('helpButton');
+
+        // Variáveis de estado do jogo
+        let isDragging = false;
+        let velocity = { x: 0, y: 0 };
+        let lastPosition = { x: 0, y: 0 };
+        let isMoving = false;
+        let friction = 0.98; // Simulação de atrito
+        let animationId = null;
+
+        // Inicialização
+        function init() {
+            resetGame();
+            addEventListeners();
+            initSecondLaw();
+            initThirdLaw();
+        }
+
+        // Adicionar event listeners
+        function addEventListeners() {
+            // Eventos para arrastar a bola
+            gameObject.addEventListener('mousedown', startDrag);
+            gameObject.addEventListener('touchstart', handleTouchStart, { passive: false });
+
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+
+            // Botões
+            startButton.addEventListener('click', startGame);
+            resetButton.addEventListener('click', resetGame);
+            helpButton.addEventListener('click', showHelp);
+        }
+
+        // Funções para lidar com eventos de toque
+        function handleTouchStart(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent('mousedown', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            startDrag(mouseEvent);
+        }
+
+        function handleTouchMove(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent('mousemove', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            drag(mouseEvent);
+        }
+
+        // Iniciar arrasto
+        function startDrag(e) {
+            isDragging = true;
+            const rect = gameObject.getBoundingClientRect();
+            lastPosition.x = e.clientX;
+            lastPosition.y = e.clientY;
+
+            // Parar qualquer movimento atual
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+
+            gameObject.style.backgroundColor = '#ff8c00'; // Mudar cor ao arrastar
+            feedback.textContent = 'Arraste e solte rapidamente para dar impulso!';
+        }
+
+        // Arrastar objeto
+        function drag(e) {
+            if (!isDragging) return;
+
+            const currentX = e.clientX;
+            const currentY = e.clientY;
+
+            // Calcular diferença de posição (será usada como velocidade inicial)
+            velocity.x = currentX - lastPosition.x;
+            velocity.y = currentY - lastPosition.y;
+
+            // Atualizar posição do objeto
+            const rect = gameObject.getBoundingClientRect();
+            const gameRect = gameArea.getBoundingClientRect();
+
+            let newLeft = rect.left + velocity.x - gameRect.left;
+            let newTop = rect.top + velocity.y - gameRect.top;
+
+            // Limitar às bordas do game area
+            newLeft = Math.max(0, Math.min(newLeft, gameRect.width - rect.width));
+            newTop = Math.max(0, Math.min(newTop, gameRect.height - rect.height));
+
+            gameObject.style.left = newLeft + 'px';
+            gameObject.style.top = newTop + 'px';
+
+            // Atualizar última posição
+            lastPosition.x = currentX;
+            lastPosition.y = currentY;
+        }
+
+        // Finalizar arrasto e iniciar movimento
+        function endDrag() {
+            if (!isDragging) return;
+            isDragging = false;
+            gameObject.style.backgroundColor = '#ff5a5a'; // Voltar à cor original
+
+            // Se houver velocidade significativa, iniciar movimento
+            if (Math.abs(velocity.x) > 1 || Math.abs(velocity.y) > 1) {
+                isMoving = true;
+                moveObject();
+                feedback.textContent = 'Observe a inércia em ação! O objeto continua se movendo.';
+            } else {
+                feedback.textContent = 'Tente mover mais rápido para ver a inércia!';
+            }
+        }
+
+        // Animar o movimento do objeto com inércia
+        function moveObject() {
+            if (!isMoving) return;
+
+            // Aplicar atrito (reduzir velocidade gradualmente)
+            velocity.x *= friction;
+            velocity.y *= friction;
+
+            // Obter posição atual
+            const rect = gameObject.getBoundingClientRect();
+            const gameRect = gameArea.getBoundingClientRect();
+
+            let newLeft = rect.left - gameRect.left + velocity.x;
+            let newTop = rect.top - gameRect.top + velocity.y;
+
+            // Verificar colisão com bordas
+            if (newLeft <= 0 || newLeft >= gameRect.width - rect.width) {
+                velocity.x = -velocity.x * 0.8; // Inverter direção e reduzir velocidade
+                newLeft = Math.max(0, Math.min(newLeft, gameRect.width - rect.width));
+                feedback.textContent = 'Colisão! A direção mudou devido à força da parede.';
+            }
+
+            if (newTop <= 0 || newTop >= gameRect.height - rect.height) {
+                velocity.y = -velocity.y * 0.8; // Inverter direção e reduzir velocidade
+                newTop = Math.max(0, Math.min(newTop, gameRect.height - rect.height));
+                feedback.textContent = 'Colisão! A direção mudou devido à força da parede.';
+            }
+
+            // Atualizar posição
+            gameObject.style.left = newLeft + 'px';
+            gameObject.style.top = newTop + 'px';
+
+            // Parar se a velocidade for muito baixa
+            if (Math.abs(velocity.x) < 0.1 && Math.abs(velocity.y) < 0.1) {
+                isMoving = false;
+                feedback.textContent = 'O objeto parou devido ao atrito. Tente novamente!';
+                return;
+            }
+
+            // Continuar animação
+            animationId = requestAnimationFrame(moveObject);
+        }
+
+        // Iniciar jogo
+        function startGame() {
+            resetGame();
+            feedback.textContent = 'Clique na bola e arraste para empurrá-la!';
+        }
+
+        // Reiniciar jogo
+        function resetGame() {
+            // Parar qualquer movimento atual
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+
+            // Resetar variáveis
+            velocity = { x: 0, y: 0 };
+            isMoving = false;
+            isDragging = false;
+
+            // Resetar posição
+            gameObject.style.left = '50px';
+            gameObject.style.top = '170px';
+            gameObject.style.backgroundColor = '#ff5a5a';
+
+            feedback.textContent = 'Experimente empurrar a bola!';
+        }
+
+        // Mostrar ajuda
+        function showHelp() {
+            alert('Desafio da Inércia:\n\n1. Clique na bola vermelha e arraste-a.\n2. Solte a bola rapidamente para dar impulso.\n3. Observe como ela continua se movendo mesmo depois que você soltou.\n4. Isso demonstra a Lei da Inércia: objetos em movimento tendem a permanecer em movimento.\n5. Observe como a bola quica nas paredes e eventualmente para devido ao atrito.\n\nBom jogo!');
+        }
+
+        // JOGO DA SEGUNDA LEI - FORÇA E ACELERAÇÃO
+        // Elementos do DOM da Segunda Lei
+        const carObject = document.getElementById('carObject');
+        const secondLawArea = document.getElementById('secondLawArea');
+        const forceSlider = document.getElementById('forceSlider');
+        const massSlider = document.getElementById('massSlider');
+        const forceValue = document.getElementById('forceValue');
+        const massValue = document.getElementById('massValue');
+        const applyForceButton = document.getElementById('applyForceButton');
+        const resetCarButton = document.getElementById('resetCarButton');
+        const helpSecondButton = document.getElementById('helpSecondButton');
+        const accelerationFeedback = document.getElementById('accelerationFeedback');
+
+        // Variáveis para segunda lei
+        let carAnimationId = null;
+        let currentForce = 50;
+        let currentMass = 50;
+        let carVelocity = 0;
+        let carAcceleration = 0;
+        let carPosition = 50;
+        let isCarMoving = false;
+
+        function initSecondLaw() {
+            forceSlider.addEventListener('input', updateForce);
+            massSlider.addEventListener('input', updateMass);
+            applyForceButton.addEventListener('click', applyCar);
+            resetCarButton.addEventListener('click', resetCar);
+            helpSecondButton.addEventListener('click', showHelpSecond);
+
+            // Inicializar
+            updateForce();
+            updateMass();
+            resetCar();
+        }
+
+        function updateForce() {
+            currentForce = parseInt(forceSlider.value);
+            forceValue.textContent = `${currentForce} N`;
+            updateAcceleration();
+        }
+
+        function updateMass() {
+            currentMass = parseInt(massSlider.value);
+            massValue.textContent = `${currentMass} kg`;
+
+            // Atualizar tamanho visual do carro baseado na massa
+            const scale = 0.5 + (currentMass / 100) * 1.5;
+            carObject.style.width = `${80 * scale}px`;
+            carObject.style.height = `${40 * scale}px`;
+
+            updateAcceleration();
+        }
+
+        function updateAcceleration() {
+            // F = m * a, portanto a = F / m
+            carAcceleration = currentForce / currentMass;
+
+            // Mostrar o resultado da aceleração
+            accelerationFeedback.textContent = `Aceleração: ${carAcceleration.toFixed(2)} m/s²`;
+        }
+
+        function applyCar() {
+            if (isCarMoving) return;
+
+            isCarMoving = true;
+            carVelocity = 0;
+            moveCar();
+        }
+
+        function moveCar() {
+            if (!isCarMoving) return;
+
+            // Atualizar velocidade baseado na aceleração
+            carVelocity += carAcceleration * 0.1; // Multiplicar por um fator para controlar a velocidade
+
+            // Atualizar posição
+            carPosition += carVelocity;
+
+            // Atualizar posição visual do carro
+            carObject.style.left = `${carPosition}px`;
+
+            // Verificar se o carro atingiu o final da tela
+            const carRect = carObject.getBoundingClientRect();
+            const areaRect = secondLawArea.getBoundingClientRect();
+
+            if (carPosition + carRect.width > areaRect.width) {
+                // Carro atingiu a borda direita
+                isCarMoving = false;
+                accelerationFeedback.textContent = `O carro chegou ao final! Aceleração final: ${carAcceleration.toFixed(2)} m/s²`;
+                return;
+            }
+
+            // Continuar animação
+            carAnimationId = requestAnimationFrame(moveCar);
+        }
+
+        function resetCar() {
+            // Cancelar animação atual
+            if (carAnimationId) {
+                cancelAnimationFrame(carAnimationId);
+                carAnimationId = null;
+            }
+
+            // Resetar variáveis
+            carPosition = 50;
+            carVelocity = 0;
+            isCarMoving = false;
+
+            // Resetar posição visual
+            carObject.style.left = `${carPosition}px`;
+
+            // Atualizar feedback
+            updateAcceleration();
+        }
+
+        function showHelpSecond() {
+            alert('Desafio da Força e Aceleração:\n\n1. Ajuste a força usando o controle deslizante superior.\n2. Ajuste a massa usando o controle deslizante inferior.\n3. Observe como a aceleração muda conforme você altera a força e a massa.\n4. Clique em "Aplicar Força" para ver o carro acelerar.\n5. Isso demonstra a Segunda Lei de Newton: F = m·a (a aceleração é diretamente proporcional à força e inversamente proporcional à massa).\n\nBom jogo!');
+        }
+
+        // JOGO DA TERCEIRA LEI - AÇÃO E REAÇÃO
+        // Elementos do DOM da Terceira Lei
+        const rocket = document.getElementById('rocket');
+        const flame = document.getElementById('flame');
+        const thrustControl = document.getElementById('thrustControl');
+        const thrustValue = document.getElementById('thrustValue');
+        const launchButton = document.getElementById('launchButton');
+        const resetRocketButton = document.getElementById('resetRocketButton');
+        const helpThirdButton = document.getElementById('helpThirdButton');
+        const rocketFeedback = document.getElementById('rocketFeedback');
+        const rocketArea = document.getElementById('rocketArea');
+
+        // Variáveis para terceira lei
+        let rocketAnimationId = null;
+        let rocketThrust = 0;
+        let rocketVelocity = 0;
+        let rocketPosition = 0;
+        let rocketLaunched = false;
+        let rocketInitialBottom = 20;
+
+        function initThirdLaw() {
+            thrustControl.addEventListener('input', updateThrust);
+            launchButton.addEventListener('click', launchRocket);
+            resetRocketButton.addEventListener('click', resetRocket);
+            helpThirdButton.addEventListener('click', showHelpThird);
+
+            // Inicializar
+            updateThrust();
+            resetRocket();
+        }
+
+        function updateThrust() {
+            rocketThrust = parseInt(thrustControl.value);
+            thrustValue.textContent = `${rocketThrust}%`;
+
+            // Atualizar visualização do impulso (chama)
+            flame.style.height = `${rocketThrust * 0.4}px`;
+
+            // Atualizar feedback
+            if (rocketThrust === 0) {
+                rocketFeedback.textContent = 'Aumente o impulso para lançar o foguete!';
+            } else {
+                rocketFeedback.textContent = `Impulso ajustado para ${rocketThrust}%. Clique em "Lançar"!`;
+            }
+        }
+
+        function launchRocket() {
+            if (rocketLaunched || rocketThrust === 0) return;
+
+            rocketLaunched = true;
+            rocketVelocity = 0;
+            moveRocket();
+
+            rocketFeedback.textContent = 'Foguete lançado! Observe a força de ação e reação!';
+        }
+
+        function moveRocket() {
+            if (!rocketLaunched) return;
+
+            // Atualizar velocidade baseado no impulso (ação e reação)
+            rocketVelocity += rocketThrust * 0.01; // Multiplicar por um fator para controlar a velocidade
+
+            // Atualizar posição
+            rocketPosition += rocketVelocity;
+
+            // Atualizar posição visual do foguete
+            rocket.style.bottom = `${rocketInitialBottom + rocketPosition}px`;
+
+            // Verificar se o foguete atingiu o topo da tela
+            const rocketRect = rocket.getBoundingClientRect();
+            const areaRect = rocketArea.getBoundingClientRect();
+
+            if (rocketRect.top <= areaRect.top) {
+                // Foguete atingiu o topo
+                rocketLaunched = false;
+                rocketFeedback.textContent = `O foguete atingiu o topo com impulso de ${rocketThrust}%!`;
+                return;
+            }
+
+            // Continuar animação
+            rocketAnimationId = requestAnimationFrame(moveRocket);
+        }
+
+        function resetRocket() {
+            // Cancelar animação atual
+            if (rocketAnimationId) {
+                cancelAnimationFrame(rocketAnimationId);
+                rocketAnimationId = null;
+            }
+
+            // Resetar variáveis
+            rocketPosition = 0;
+            rocketVelocity = 0;
+            rocketLaunched = false;
+
+            // Resetar posição visual
+            rocket.style.bottom = `${rocketInitialBottom}px`;
+
+            // Resetar controles
+            thrustControl.value = 0;
+            updateThrust();
+        }
+
+        function showHelpThird() {
+            alert('Desafio do Foguete - Ação e Reação:\n\n1. Ajuste o impulso usando o controle deslizante.\n2. Observe como a chama do foguete cresce (ação).\n3. Clique em "Lançar" para ver o foguete subir (reação).\n4. Quanto maior o impulso, mais rápido o foguete sobe.\n5. Isso demonstra a Terceira Lei de Newton: para cada ação (expulsão de gases para baixo) há uma reação igual e oposta (impulso do foguete para cima).\n\nBom jogo!');
+        }
+
+        // Iniciar os jogos quando a página carregar
+        window.onload = init;
+    </script>
+</body>
+
+</html>
